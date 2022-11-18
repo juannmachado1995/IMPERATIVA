@@ -15,7 +15,7 @@ let ejercicio = tablaDeMultiplicar(4)
 console.log (ejercicio)*/
 
 // CLASE EN VIVO CON LUCRECIA 7-11-22
-
+/*
 let arrayCorreosPendientes = [
     'iroman@digitalhouse.com','loki%digitalhouse.com','loki@digitalhouse.com', 'thanosdigitalhouse.com','thanos@digitalhouse.com'];
   
@@ -37,4 +37,24 @@ for (let i=0 ; i < arrayCorreosPendientes.length ; i++){
 }
 
 console.log(arrayCorreosAdmitidos)
-console.log(arrayCorreosDescartados)
+console.log(arrayCorreosDescartados)*/
+/*
+function tablaDeMultiplicar(numero) {
+    let i = 1
+    while (i <= 10){
+        console.log(numero + " * " + i + " = " + numero * i)
+        i++
+    } 
+    
+}
+tablaDeMultiplicar(5)*/
+
+function noParesDeContarImparesHasta(numero){
+    let impares = 0
+    for (let i = 0 ; i <= numero ; i++){
+        if (i%2 !== 0){impares += 1
+        }
+    }
+    return impares
+}
+console.log(noParesDeContarImparesHasta(10))

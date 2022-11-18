@@ -205,21 +205,57 @@ for (let i = 0 ; i < arrayCuentas.length ; i++ ){
 
 /*
 Extras:
+
 Desarrollar una función llamada generarID que reciba como parámetro el array de cuentas y agregue a cada elemento
  (objeto literal) una propiedad llamada id con un valor Numérico*/
-function generarID (arrayCuentas){
+
+ function generarID(arrayCuentas){
   for (let i = 0 ; i < arrayCuentas.length ; i++){
-    arrayCuentas[i]. = 1000
+      arrayCuentas[i].id = i+5*5
   }
+  return arrayCuentas
 }
-console.log(generarID(arrayCuentas))
+
+generarID(arrayCuentas)
+
+arrayCuentas
 /*
 Desarrollar una función llamada buscarPorId que reciba como parámetro el array de cuentas y un id, en caso de 
-encontrar retornar la cuenta (él objeto literal completo), caso contrario retornar null
+encontrar retornar la cuenta (él objeto literal completo), caso contrario retornar null*/
 
+function buscarPorId (arrayCuentas,numId){
+    for(let i = 0 ; i < arrayCuentas.length ; i++){
+
+      if( arrayCuentas[i].indexof(numId) >=0 ){
+         return arrayCuentas[i]
+      }
+      else {return null}
+      }
+
+    }
+console.log(arrayCuentas[0].id)
+
+/*
 Desarrollar una función llamada filtrarPorSaldos que reciba como parámetro el array de cuentas y un saldo (Number), 
-deberá retornar un array que se cuyas cuentas se encuentren por debajo del saldo enviado por parámetro
+deberá retornar un array que se cuyas cuentas se encuentren por debajo del saldo enviado por parámetro*/
 
+function filtrarPorSaldos (arrayCuentas,saldofiltrado){
+  let saldofiltra2 = []  
+  for(let i = 0 ; i < arrayCuentas.length ; i++){
+      if (arrayCuentas[i].saldo < saldofiltrado){
+        saldofiltra2.push(arrayCuentas[i])
+      }
+    }
+    return saldofiltra2
+}
+
+/*
 Desarrollar una función llamada incrementarSaldo que reciba como parámetro el array de cuentas, un id y un saldo,
 deberá incrementar él saldo de la cuenta, en caso de encontrar, caso contrario retornar undefined 
 Reutilizando la función  buscarPorId.*/
+
+/*function incrementarSaldo (arrayCuentas,id,saldo){
+  for (let i = 0 ; i < arrayCuentas.length ; i++){
+
+  }
+}*/
