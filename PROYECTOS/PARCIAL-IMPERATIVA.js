@@ -1,0 +1,110 @@
+/*Ejercicio 1: 
+Declarar tres variables y asignarles un número entero a las tres.*/
+
+let var1 = 5
+let var2 = 12 
+let var3 = 7
+
+/*
+Crear una única función que reciba tres parámetros, que analice:
+Si el primer parámetro es mayor que el segundo y menor que el tercero, se debe retornar la multiplicación de los
+tres números.
+Si el segundo parámetro es par o distinto de 0, se deberá retornar la suma de los tres números.
+Para cualquier otro caso, se deberá retornar “No ha sido posible la verificación”.
+Invocar a la función pasándole por parámetros las tres variables declaradas en el punto 1 */
+
+function calculadora (numA,numB,numC){
+    if (numA > numB && numA < numC){
+        return numA * numB * numC
+    }
+    else if (numB %2 === 0 || numB != 0){
+        return numA + numB + numC
+    }
+    else {return "No ha sido posible la verificación"}
+}
+calculadora(var1,var2,var3)
+
+/*
+Ejercicio 2:
+Declarar una función que nos indique si una persona está apta para realizar un viaje. Para esto, se deberá recibir 
+por parámetro una edad (number) y si tiene pasaje o no (booleano). Se deberán analizar las siguientes situaciones:
+Si la edad es mayor a 18 años y tiene pasaje, retornar una frase que diga: “Puede viajar”
+Si es mayor de edad pero no tiene pasaje, retornar una frase que diga: “Debe comprar un pasaje”
+Si no es mayor de edad pero tiene pasaje, retornar una frase que diga: “Puede viajar solo con un adulto”
+Para cualquier otro caso, retornar “No podrá viajar”*/
+
+function personaApta (edad,pasaje){
+    if (edad > 18 && pasaje === true){
+        return "Puede viajar"
+    }
+    else if (edad > 18 && pasaje === false){
+        return "Debe comprar pasaje"
+    }
+    else if (edad < 18 && pasaje === true){
+        return "Puede viajar solo con un adulto"
+    }
+    else {return "No podra viajar"}
+}
+personaApta(17,false)
+//Consola: No podra viajar
+
+/*
+EJERCICIO 3
+Dado el siguiente arreglo de objetos:
+*/
+
+let programadores = [
+    {
+        nombre : "Gianni",
+        seniority : "Senior",
+        anosDeExperiencia : 15
+    },
+    {
+        nombre : "Mina",
+        seniority : "semiSenior",
+        anosDeExperiencia : 6
+    },
+    {
+        nombre : "Robert",
+        seniority : "Junior",
+        anosDeExperiencia : 1
+    },
+    {
+        nombre : "Luciano",
+        seniority : "Senior",
+        anosDeExperiencia : 12
+    },
+    {
+        nombre : "Monica",
+        seniority : "Junior",
+        anosDeExperiencia : 3
+    }
+]
+ 
+/*
+Realizar una función que reciba un array como parámetro, y lo recorra para filtrar las personas cuyos años 
+de experiencia sean mayor o igual a 10 años. La función deberá retornar un nuevo arreglo con los objetos que 
+cumplan con la condición antes mencionada.
+Ejecutar el correspondiente llamado a la función realizada en el inciso anterior para mostrar su 
+correcto funcionamiento.
+*/
+
+function filtrarArray (array){
+    let empleadosExperimentados = []
+    for (let i = 0 ; i < array.length ; i++){
+        if (array[i].anosDeExperiencia >= 10){
+            empleadosExperimentados.push(array[i])
+        }
+    }
+    return empleadosExperimentados
+}
+
+console.log(filtrarArray(programadores))
+
+//RESULTADO X CONSOLA ES EL SIGUIENTE
+/*
+[
+  { nombre: 'Gianni', seniority: 'Senior', anosDeExperiencia: 15 },
+  { nombre: 'Luciano', seniority: 'Senior', anosDeExperiencia: 12 }
+]
+*/
