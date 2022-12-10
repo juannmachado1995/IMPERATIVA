@@ -98,3 +98,15 @@ function diagonalVerde (mtrz){
     return resultadoFinal
 }
 console.log(diagonalVerde(matriz10x10))
+
+function sumaDiagonales (mtrz){
+    //Identificar diagonal // Sumar diagonal
+    let resultadoFinal = 0
+    for(let i = 0 ; i < mtrz.length ; i++){
+        for (let j = 0 ; j < mtrz[i].length ; j++)
+        if ( i === j || i + j === 2) {
+            resultadoFinal += mtrz [i][j]
+        }
+    }
+    return resultadoFinal
+}
