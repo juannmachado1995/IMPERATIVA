@@ -218,7 +218,6 @@ Desarrollar una función llamada generarID que reciba como parámetro el array d
 
 generarID(arrayCuentas)
 
-arrayCuentas
 /*
 Desarrollar una función llamada buscarPorId que reciba como parámetro el array de cuentas y un id, en caso de 
 encontrar retornar la cuenta (él objeto literal completo), caso contrario retornar null*/
@@ -231,9 +230,7 @@ function buscarPorId (arrayCuentas,numId){
       }
       else {return null}
       }
-
     }
-console.log(arrayCuentas[0].id)
 
 /*
 Desarrollar una función llamada filtrarPorSaldos que reciba como parámetro el array de cuentas y un saldo (Number), 
@@ -259,3 +256,4 @@ Reutilizando la función  buscarPorId.*/
 
   }
 }*/
+console.log(arrayCuentas[1].indexof(false))
